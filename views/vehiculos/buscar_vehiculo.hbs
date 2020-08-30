@@ -1,0 +1,16 @@
+<div class="contenedor-info">
+
+  <form action="/buscarVehiculo" method="POST" class="formulario-corto">
+
+    <label for="matricula" class="texto">Matricula:</label>
+    <input type="text" name="matricula" value="" placeholder="ET-000000 / ET-000000-R" class="texto input">
+
+    <input type="submit" value="Buscar" class="texto boton">
+
+    {{#if message}}
+    <div  class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

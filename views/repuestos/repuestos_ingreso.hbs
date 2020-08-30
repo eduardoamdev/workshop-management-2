@@ -1,0 +1,62 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/pintarDetallesIngreso" class="link-nav texto">Volver al ingreso</a>
+    <a href="/nuevoRepuesto" class="link-nav texto">Nuevo repuesto</a>
+  </div>
+
+  {{#if repuestos}}
+  <table>
+
+    <thead>
+      <tr>
+        <td class="texto td-medio">
+          Repuesto
+        </td>
+        <td class="texto td-corto">
+          NOC
+        </td>
+        <td class="texto td-corto">
+          Fecha de petición
+        </td>
+        <td class="texto td-corto">
+          Fecha de recepción
+        </td>
+        <td class="texto td-corto">
+          Modificación
+        </td>
+        </td>
+        <td class="texto td-corto">
+          Borrado
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each repuestos}}
+      <tr>
+        <td class="texto td-medio-left">
+          {{this.nombre}}
+        </td>
+        <td class="texto td-corto">
+          {{this.noc}}
+        </td>
+        <td class="texto td-corto">
+          {{this.fechaPeticion}}
+        </td>
+        <td class="texto td-corto">
+          {{this.fechaRecepcion}}
+        </td>
+        <td class="texto td-corto">
+          <a href="/modificarRepuesto/{{this._id}}" class="link-consulta-actualizacion">Modificar</a>
+        </td>
+        <td class="texto td-corto">
+          <a href="/confirmarBorrado/{{this._id}}" class="link-borrado">Borrar</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  {{/if}}
+
+</div>

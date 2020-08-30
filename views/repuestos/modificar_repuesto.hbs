@@ -1,0 +1,29 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/pintarRepuestos" class="link-nav texto">Volver a repuestos</a>
+  </div>
+
+  <form action="/modificarRepuesto" method="POST" class="formulario-extenso">
+
+    <label for="nombre" class="texto">Nombre:</label>
+    <input type="text" name="nombre" value="{{repuesto.nombre}}" class="texto input">
+
+    <label for="noc" class="texto label-mas-separado">NOC:</label>
+    <input type="text" name="noc" value="{{repuesto.noc}}" placeholder="0000-00-000-0000" class="texto input">
+
+    <label for="fechaPeticion" class="texto label-mas-separado">Fecha de petición:</label>
+    <input type="text" name="fechaPeticion" value="{{repuesto.fechaPeticion}}" placeholder="0000-00-00  año/mes/día" class="texto input">
+
+    <label for="fechaRecepcion" class="texto label-mas-separado">Fecha de recepción:</label>
+    <input type="text" name="fechaRecepcion" value="{{repuesto.fechaRecepcion}}" placeholder="0000-00-00  año/mes/día" class="texto input">
+
+    <input type="submit" value="Modificar repuesto" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

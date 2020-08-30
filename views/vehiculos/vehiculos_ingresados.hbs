@@ -1,0 +1,32 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/todosLosVehiculos" class="link-nav texto">Ver todos los vehiculos</a>
+  </div>
+
+  <table>
+
+    {{#each vehiculosIngresados}}
+
+    <a href="">
+      <tr>
+        <td class="texto td-corto">
+          {{this.matricula}}
+        </td>
+        <td class="texto td-corto">
+          {{this.tipo}}
+        </td>
+        <td class="texto td-extenso">
+          {{this.ordenIngresoActual}}
+        </td>
+         <td class="texto td-extenso">
+          <a href="/detalleIngresoActual/{{this._id}}" class="link-consulta-actualizacion">Ver ingreso / Actualizar ingreso</a>
+        </td>
+      </tr>
+    </a>
+
+    {{/each}}
+
+  </table>
+
+</div>

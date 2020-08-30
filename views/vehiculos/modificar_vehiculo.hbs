@@ -1,0 +1,34 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/pintarVehiculo" class="link-nav texto">Información del vehículo</a>
+  </div>
+
+  <form action="/modificarVehiculo" method="POST" class="formulario-corto">
+
+    <label for="matricula" class="texto">Matricula:</label>
+    <input type="text" name="matricula" value="{{vehiculo.matricula}}" placeholder="ET-000000 / ET-000000-R" class="texto input">
+
+    <label for="tipo" class="texto label-mas-separado">Tipo de vehículo:</label>
+    <select name="tipo" class="texto input">
+      {{#each tiposVehiculos}}
+      <option value="{{nombre}}">{{nombre}}</option>
+      {{/each}}
+    </select>
+
+    <label for="grupo" class="texto label-mas-separado">Grupo o cia:</label>
+    <select name="grupo" class="texto input">
+      {{#each gruposCias}}
+      <option value="{{nombre}}">{{nombre}}</option>
+      {{/each}}
+    </select>
+
+    <input type="submit" value="Modificar vehículo" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

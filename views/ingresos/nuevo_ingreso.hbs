@@ -1,0 +1,25 @@
+<div class="contenedor-info">
+
+  <form action="/nuevoIngreso" method="POST" class="formulario-extenso">
+
+    <label for="matricula" class="texto">Matricula:</label>
+    <input type="text" name="matricula" value="" placeholder="ET-000000 / ET-000000-R" class="texto input">
+
+    <label for="fechaEntrada" class="texto label-mas-separado">Fecha de entrada:</label>
+    <input type="text" name="fechaEntrada" value="" placeholder="0000-00-00  año/mes/día" class="texto input">
+
+    <label for="orden" class="texto label-mas-separado">Orden de trabajo:</label>
+    <input type="text" name="orden" value="" placeholder="00000000-0000-0P-00000" class="texto input">
+
+    <label for="motivo" class="texto label-mas-separado">Síntomas:</label>
+    <textarea rows="5" cols="60" name="motivo" type="text"></textarea>
+
+    <input type="submit" value="Añadir nuevo ingreso" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

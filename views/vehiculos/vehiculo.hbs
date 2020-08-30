@@ -1,0 +1,41 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/ingresosVehiculo/{{vehiculo._id}}" class="link-nav texto">Consultar historial</a>
+    <a href="/modificarVehiculo" class="link-nav texto">Modificar vehículo</a>
+    <a href="/confirmacionBorradoVehiculo" class="link-rojo texto">Borrar vehículo</a>
+  </div>
+
+<table>
+    
+    <caption class="texto">
+      Información básica
+    </caption>
+    <tr>     
+        <td class="texto td-corto">
+          Matrícula
+        </td>
+        <td class="texto td-corto">
+          {{vehiculo.matricula}}
+        </td>
+    </tr>
+    <tr>     
+        <td class="texto td-corto">
+          Tipo
+        </td>
+        <td class="texto td-corto">
+          {{vehiculo.tipo}}
+        </td>
+    </tr>
+    <tr>     
+        <td class="texto td-corto">
+          Grupo
+        </td>
+        <td class="texto td-corto">
+          {{vehiculo.grupoCia}}
+        </td>
+    </tr>
+
+  </table>
+
+</div>

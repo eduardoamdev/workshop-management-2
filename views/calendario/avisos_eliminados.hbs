@@ -1,0 +1,54 @@
+<div class="contenedor-info">
+
+  {{#if avisosEliminados}}
+  <table>
+
+    <caption class='texto'>
+      Avisos eliminados
+    </caption>
+    <thead>
+      <tr>
+        <td class="texto td-medio">
+          Fecha próxima revisión
+        </td>
+        <td class="texto td-medio">
+          Matrícula del vehículo
+        </td>
+        <td class="texto td-medio">
+          Tipo de revisión
+        </td>
+        <td class="texto td-medio">
+          Fecha del ingreso
+        </td>
+        </td>
+        <td class="texto td-corto">
+          Eliminar
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each avisosEliminados}}
+      <tr>
+        <td class="texto td-medio">
+          {{this.fechaProximaPreventiva}}
+        </td>
+        <td class="texto td-medio">
+          {{this.vehiculo}}
+        </td>
+        <td class="texto td-medio">
+          {{this.periodicidadPreventiva}}
+        </td>
+        <td class="texto td-medio">
+          {{this.fechaIngresoPreventiva}}
+        </td>
+        <td class="texto td-corto">
+          <a href="/restaurarAviso/{{this._id}}" class="link-consulta-actualizacion">Restaurar</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  {{/if}}
+
+</div>

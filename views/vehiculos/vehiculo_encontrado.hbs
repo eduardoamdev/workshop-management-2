@@ -1,0 +1,31 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/vehiculosIngresados" class="link-nav texto">Vehículos ingresados</a>
+    <a href="/nuevoVehiculo" class="link-nav texto">Nuevo vehículo</a>
+    <a href="/buscarVehiculo" class="link-nav texto">Buscar vehículo</a>
+  </div>
+
+  <table>
+
+    <tr>     
+        <td class="texto td-corto">
+          {{vehiculo.matricula}}
+        </td>
+        <td class="texto td-corto">
+          {{vehiculo.tipo}}
+        </td>
+        <td class="texto td-medio">
+          {{vehiculo.noc}}
+        </td>
+        <td class="texto td-corto">
+          {{vehiculo.grupoCia}}
+        </td>
+        <td class="texto td-medio">
+          <a href="/detalleVehiculo/{{vehiculo._id}}" class="link-consulta-actualizacion">Consultar / Modificar</a>
+        </td>
+    </tr>
+
+  </table>
+
+</div>

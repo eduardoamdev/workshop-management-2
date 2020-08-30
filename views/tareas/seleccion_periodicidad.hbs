@@ -1,0 +1,20 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/nuevaTarea" class="link-nav texto">Volver a selecionar tipo de tarea</a>
+  </div>
+
+  <form action="/tipoPreventiva" method="POST" class="formulario-corto">
+
+    <label for="frecuencia" class="texto label-mas-separado">Periodicidad de la tarea:</label>
+    <select name="frecuencia" class="texto input">
+      {{#each frecuencias}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+
+    <input type="submit" value="Continuar" class="texto boton">
+
+  </form>
+
+</div>

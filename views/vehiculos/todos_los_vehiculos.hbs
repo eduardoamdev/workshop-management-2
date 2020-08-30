@@ -1,0 +1,35 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/vehiculosIngresados" class="link-nav texto">Vehículos ingresados</a>
+    <a href="/nuevoVehiculo" class="link-nav texto">Nuevo vehículo</a>
+    <a href="/buscarVehiculo" class="link-nav texto">Buscar vehículo</a>
+  </div>
+
+  <table>
+    
+    {{#each vehiculos}}
+
+    <tr>     
+        <td class="texto td-corto">
+          {{this.matricula}}
+        </td>
+        <td class="texto td-extenso">
+          {{this.tipo}}
+        </td>
+        <td class="texto td-medio">
+          {{this.noc}}
+        </td>
+        <td class="texto td-corto">
+          {{this.grupoCia}}
+        </td>
+        <td class="texto td-medio">
+          <a href="/detalleVehiculo/{{this._id}}" class="link-consulta-actualizacion">Consultar / Modificar</a>
+        </td>
+    </tr>
+
+    {{/each}}
+
+  </table>
+
+</div>

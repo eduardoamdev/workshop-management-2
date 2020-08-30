@@ -1,0 +1,78 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/pintarDetallesIngreso" class="link-nav texto">Volver al ingreso</a>
+    <a href="/nuevaTarea" class="link-nav texto">Nueva tarea</a>
+  </div>
+
+  {{#if preventivasIngreso}}
+  <table>
+    <caption class="texto">
+      Tarea preventiva
+    </caption>
+    <tr>
+      <td class="texto td-corto">
+        Periodicidad
+      </td>
+      <td class="texto td-corto">
+        Fecha
+      </td>
+      <td class="texto td-corto">
+        Kilómetros
+      </td>
+      <td class="texto td-medio">
+        Consulta / Modificación
+      </td>
+    </tr>
+    {{#each preventivasIngreso}}
+    <tr>
+      <td class="texto td-corto">
+        {{this.frecuencia}}
+      </td>
+      <td class="texto td-corto">
+        {{this.fecha}}
+      </td>
+      <td class="texto td-corto">
+        {{this.kilometros}}
+      </td>
+      <td class="texto td-medio">
+        <a href="/detallePreventiva/{{this._id}}" class="link-consulta-actualizacion">Consultar / Modificar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{/if}}
+
+  {{#if correctivasIngreso}}
+  <table>
+    <caption class="texto">
+      Tareas correctivas
+    </caption>
+    <tr>
+      <td class="texto td-corto">
+        Fecha
+      </td>
+      <td class="texto td-largo-center">
+        Descripción
+      </td>
+      <td class="texto td-medio">
+        Consulta / Modificación
+      </td>
+    </tr>
+    {{#each correctivasIngreso}}
+    <tr>
+      <td class="texto td-corto">
+        {{this.fecha}}
+      </td>
+      <td class="texto td-largo">
+        {{this.descripcion}}
+      </td>
+      <td class="texto td-medio">
+        <a href="/detalleCorrectiva/{{this._id}}" class="link-consulta-actualizacion">Consultar / Modificar</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+  {{/if}}
+
+</div>

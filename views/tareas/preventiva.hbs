@@ -1,0 +1,66 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/pintarTareas" class="link-nav texto">Volver a tareas</a>
+    <a href="/modificarPreventiva" class="link-nav texto">Modificar preventiva {{frecuenciaMinuscula}}</a>
+    <a href="/confirmarBorradoPreventiva" class="link-rojo texto">Borrar preventiva</a>
+  </div>
+
+  <table>
+    
+    <tr>     
+        <td class="texto td-corto">
+          Periodicidad
+        </td>
+        <td class="texto td-corto">
+          Fecha
+        </td>
+        <td class="texto td-corto">
+          Kilómetros
+        </td>
+    </tr>
+    <tr>     
+        <td class="texto td-corto">
+          {{preventiva.frecuencia}}
+        </td>
+        <td class="texto td-corto">
+          {{preventiva.fecha}}
+        </td>
+        <td class="texto td-corto">
+          {{preventiva.kilometros}}
+        </td>
+    </tr>
+
+  </table>
+
+  <table>
+
+    <caption class="texto">
+      Subtareas
+    </caption>
+    {{#each preventiva.subtareas}}
+    <tr>
+      <td class="texto td-largo">
+      {{this}}
+      </td>
+    </tr>
+    {{/each}}
+
+  </table>
+
+  {{#if preventiva.observaciones}}
+  <table>
+
+    <caption class="texto">
+      Observaciones
+    </caption>
+    <tr>
+      <td class="texto td-largo">
+      {{preventiva.observaciones}}
+      </td>
+    </tr>
+
+  </table>
+  {{/if}}
+
+</div>

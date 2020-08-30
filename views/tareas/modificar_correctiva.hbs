@@ -1,0 +1,28 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/PintarCorrectiva" class="link-nav texto">
+      Volver a la tarea
+    </a>
+  </div>
+
+  <form action="/modificarCorrectiva" method="POST" class="formulario-extenso">
+
+    <label for="fecha" class="texto label-mas-separado">Fecha:</label>
+    <input type="text" name="fecha" value="{{correctiva.fecha}}" placeholder="0000-00-00" class="texto input">
+
+    <label for="descripcion" class="texto label-mas-separado">Descripción:</label>
+    <textarea rows="4" cols="60" name="descripcion" type="text" class="texto">{{correctiva.descripcion}}</textarea>
+
+    <label for="observaciones" class="texto label-mas-separado">Observaciones (opcional):</label>
+    <textarea rows="8" cols="60" name="observaciones" type="text" class="texto">{{correctiva.observaciones}}</textarea>
+
+    <input type="submit" value="Modificar correctiva" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

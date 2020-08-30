@@ -1,0 +1,58 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/avisosEliminados" class="link-nav texto">Avisos eliminados de esta lista</a>
+  </div>
+
+  {{#if avisosActivos}}
+  <table>
+
+    <caption class='texto'>
+      Próximas preventivas
+    </caption>
+    <thead>
+      <tr>
+        <td class="texto td-medio">
+          Fecha próxima revisión
+        </td>
+        <td class="texto td-medio">
+          Matrícula del vehículo
+        </td>
+        <td class="texto td-medio">
+          Tipo de revisión
+        </td>
+        <td class="texto td-medio">
+          Fecha del ingreso
+        </td>
+        </td>
+        <td class="texto td-corto">
+          Eliminar
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each avisosActivos}}
+      <tr>
+        <td class="texto td-medio">
+          {{this.fechaProximaPreventiva}}
+        </td>
+        <td class="texto td-medio">
+          {{this.vehiculo}}
+        </td>
+        <td class="texto td-medio">
+          {{this.periodicidadPreventiva}}
+        </td>
+        <td class="texto td-medio">
+          {{this.fechaIngresoPreventiva}}
+        </td>
+        <td class="texto td-corto">
+          <a href="/eliminarDeLista/{{this._id}}" class="link-borrado">Eliminar</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+  {{/if}}
+
+</div>

@@ -1,0 +1,41 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/pintarPreventiva" class="link-nav texto">Volver a la preventiva</a>
+  </div>
+
+  <form action="/modificarPreventiva" method="POST" class="formulario-extenso">
+
+    <label for="subtareas" class="texto label-mas-separado">SUBTAREAS:</label>
+
+    <div>
+      {{#each preventivas}}
+      <div class="linea-checkbox texto input">
+        {{#ifEqual this.[1] "checked"}}
+        <input type="checkbox" name="subtareas" value="{{this.[0]}}" checked="true">{{this.[0]}}<br>
+        {{/ifEqual}}
+        {{#ifEqual this.[1] "notChecked"}}
+        <input type="checkbox" name="subtareas" value="{{this.[0]}}">{{this.[0]}}<br>
+        {{/ifEqual}}
+      </div>
+      {{/each}}
+    </div>
+
+    <label for="fecha" class="texto label-mas-separado">Fecha:</label>
+    <input type="text" name="fecha" value="{{preventiva.fecha}}" placeholder="0000-00-00" class="texto input">
+
+    <label for="kilometros" class="texto label-mas-separado">Kilómetros:</label>
+    <input type="text" name="kilometros" value="{{preventiva.kilometros}}" class="texto input">
+
+    <label for="observaciones" class="texto label-mas-separado">Observaciones (opcional):</label>
+    <textarea rows="4" cols="60" name="observaciones" type="text" class="texto">{{preventiva.observaciones}}</textarea>
+
+    <input type="submit" value="Modificar preventiva" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

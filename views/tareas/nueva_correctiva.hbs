@@ -1,0 +1,28 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/nuevaTarea" class="link-nav texto">
+      Volver
+    </a>
+  </div>
+
+  <form action="/nuevaCorrectiva" method="POST" class="formulario-extenso">
+
+    <label for="fecha" class="texto label-mas-separado">Fecha:</label>
+    <input type="text" name="fecha" value="" placeholder="0000-00-00" class="texto input">
+
+    <label for="descripcion" class="texto label-mas-separado">Descripción:</label>
+    <textarea rows="4" cols="60" name="descripcion" type="text" class="texto"></textarea>
+
+    <label for="observaciones" class="texto label-mas-separado">Observaciones (opcional):</label>
+    <textarea rows="8" cols="60" name="observaciones" type="text" class="texto"></textarea>
+
+    <input type="submit" value="Añadir nueva correctiva" class="texto boton">
+
+    {{#if message}}
+    <div class="texto mensaje-error">{{message}}</div>
+    {{/if}}
+
+  </form>
+
+</div>

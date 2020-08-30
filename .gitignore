@@ -1,0 +1,11 @@
+# Directorio de dependencias.
+node_modules
+
+# Debug log del gestor de paquetes de nodejs.
+npm-debug.log
+
+# El archivo package-lock.json
+package-lock.json
+
+# Variables de entorno.
+.env

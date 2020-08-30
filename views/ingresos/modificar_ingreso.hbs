@@ -1,0 +1,37 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/pintarDetallesIngreso" class="link-nav texto">Volver al ingreso</a>
+  </div>
+
+  {{#ifEqual coleccionDeIngresos "no"}}
+  <form action="/modificarIngresoActual" method="POST" class="formulario-extenso-enlace">
+    {{/ifEqual}}
+    {{#ifEqual coleccionDeIngresos "si"}}
+    <form action="/modificarIngreso" method="POST" class="formulario-extenso-enlace">
+      {{/ifEqual}}
+
+      <label for="fechaEntrada" class="texto label-mas-separado">Fecha de entrada:</label>
+      <input type="text" name="fechaEntrada" value="{{ingreso.fechaEntrada}}" placeholder="0000-00-00  año/mes/día"
+        class="texto input">
+
+      <label for="fechaSalida" class="texto label-mas-separado">Fecha de salida:</label>
+      <input type="text" name="fechaSalida" value="{{ingreso.fechaSalida}}" placeholder="0000-00-00  año/mes/día"
+        class="texto input">
+
+      <label for="orden" class="texto label-mas-separado">Orden de trabajo:</label>
+      <input type="text" name="orden" value="{{ingreso.orden}}" placeholder="00000000-0000-0P-00000"
+        class="texto input">
+
+      <label for="motivo" class="texto label-mas-separado">Síntomas:</label>
+      <textarea rows="5" cols="60" name="motivo" type="text">{{ingreso.motivo}}</textarea>
+
+      <input type="submit" value="Modificar ingreso" class="texto boton">
+
+      {{#if message}}
+      <div class="texto mensaje-error">{{message}}</div>
+      {{/if}}
+
+    </form>
+
+</div>

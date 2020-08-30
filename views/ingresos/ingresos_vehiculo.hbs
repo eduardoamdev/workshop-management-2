@@ -1,0 +1,30 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-center">
+    <a href="/detalleVehiculo/{{vehiculo._id}}" class="link-nav texto">Información del vehículo</a>
+  </div>
+
+  {{#if ingresos}}
+  <table>
+    
+    <caption class="texto">
+      Ingresos del vehículo con matrícula {{vehiculo.matricula}}
+    </caption>
+    {{#each ingresos}}
+    <tr>     
+        <td class="texto td-corto">
+          {{this.fechaEntrada}}
+        </td>
+        <td class="texto td-largo">
+          {{this.motivo}}
+        </td>
+        <td class="texto td-medio">
+          <a href="/detalleIngreso/{{this._id}}" class="link-consulta-actualizacion">Consultar / Modificar</a>
+        </td>
+    </tr>
+    {{/each}}
+
+  </table>
+  {{/if}}
+
+</div>

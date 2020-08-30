@@ -1,0 +1,51 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/ingresosVehiculo/{{vehiculo._id}}" class="link-nav texto">Ingresos del vehículo</a>
+    <a href="/modificarIngreso" class="link-nav texto">Modificar ingreso</a>
+    <a href="/tareas/{{ingreso._id}}" class="link-nav texto">Tareas</a>
+    <a href="/repuestos/{{ingreso._id}}" class="link-nav texto">Repuestos</a>
+    <a href="/confirmacionBorradoIngreso" class="link-rojo texto">Borrar ingreso</a>
+  </div>
+
+  <table>
+
+    <caption class="texto">
+      Ingreso del vehículo con matrícula {{vehiculo.matricula}}
+    </caption>
+    <tr>
+      <td class="texto td-corto-izquierda">
+        Fecha de entrada
+      </td>
+      <td class="texto td-largo">
+        {{ingreso.fechaEntrada}}
+      </td>
+    </tr>
+    <tr>
+      <td class="texto td-corto-izquierda">
+        Fecha de salida
+      </td>
+      <td class="texto td-largo">
+        {{ingreso.fechaSalida}}
+      </td>
+    </tr>
+    <tr>
+      <td class="texto td-corto-izquierda">
+        Orden
+      </td>
+      <td class="texto td-largo">
+        {{ingreso.orden}}
+      </td>
+    </tr>
+    <tr>
+      <td class="texto td-corto-izquierda">
+        Motivo
+      </td>
+      <td class="texto td-largo">
+        {{ingreso.motivo}}
+      </td>
+    </tr>
+
+  </table>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="contenedor-info">
+
+  <div class="enlaces-superiores-between">
+    <a href="/pintarTareas" class="link-nav texto">Volver a tareas</a>
+    <a href="/modificarCorrectiva" class="link-nav texto">Modificar correctiva</a>
+    <a href="/confirmarBorradoCorrectiva" class="link-rojo texto">Borrar correctiva</a>
+  </div>
+
+  <table>  
+    <tr>     
+        <td class="texto td-corto">
+          Fecha
+        </td>
+        <td class="texto td-largo">
+          {{correctiva.fecha}}
+        </td>       
+    </tr> 
+    <tr>     
+        <td class="texto td-corto">
+          Descripción
+        </td>
+        <td class="texto td-largo">
+          {{correctiva.descripcion}}
+        </td>       
+    </tr>
+    <tr>     
+        <td class="texto td-corto">
+          Observaciones
+        </td>
+        <td class="texto td-largo">
+          {{correctiva.observaciones}}
+        </td>
+    </tr>
+  </table>
+
+</div>
