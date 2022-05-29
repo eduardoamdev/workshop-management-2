@@ -1,5 +1,7 @@
 # Workshop Management 2
 
+<img src="./hbs.node.express.png" alt="handlebars-node-express"/>
+
 ## Descripción:
 
 Este proyecto está siendo utilizado en red local por la Agrupación Sanitaria número 3 de Zaragoza y es una mejora una mejora de "Workshop-management-1" ya que incluye ciertas tareas automatizadas y avisa al usuario de manera de ciertos eventos con una frecuencia que puede ser programada directamente.
